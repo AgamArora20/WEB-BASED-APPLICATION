@@ -109,6 +109,23 @@ Steps:
 4. Render automatically runs `pip install -r requirements.txt && python manage.py collectstatic --noinput` for the backend and `npm install && npm run build` for the frontend.
 5. After the first deploy, run `python manage.py createsuperuser` via the Render shell to configure Basic Auth credentials.
 
+## Deploying the Backend to Railway (card-free option)
+
+If you’d rather keep everything on a free tier without adding payment info, deploy the Django API to [Railway](https://railway.app/) and the React build to Vercel/Netlify. This repo now ships with:
+
+- `Procfile`: tells Railway how to start Gunicorn (`web: cd backend && gunicorn chemical_equipment.wsgi:application`)
+- `railway.json`: instructs Railway’s Nixpacks builder to `pip install` + `collectstatic` before launching
+
+Steps:
+
+1. Install the Railway CLI (`npm i -g railway`) and run `railway login`.
+2. From the repo root run `railway init` → “Deploy from current directory”.
+3. Railway will detect `railway.json` and build the backend automatically.
+4. In the Railway dashboard, create a Postgres plugin and copy its connection URL into the `DATABASE_URL` variable.
+5. Add the other env vars (`DJANGO_SECRET_KEY`, `DJANGO_ALLOWED_HOSTS`, `DJANGO_CSRF_TRUSTED_ORIGINS`, `CORS_ALLOWED_ORIGINS`, `DJANGO_DEBUG=False`).
+6. Visit the deployed URL, then run `railway run python backend/manage.py migrate` and `railway run python backend/manage.py createsuperuser`.
+7. Host the React frontend on Vercel/Netlify and set `VITE_API_BASE_URL` to the Railway backend URL.
+
 ## Demo & Submission Notes
 
 1. Record a short (2–3 min) screen capture showing:
