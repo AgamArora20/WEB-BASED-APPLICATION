@@ -2,7 +2,6 @@ services:
   - type: web
     name: chemical-equipment-backend
     env: python
-    plan: free
     buildCommand: cd backend && pip install -r requirements.txt && python manage.py collectstatic --noinput
     startCommand: cd backend && gunicorn chemical_equipment.wsgi:application
     autoDeploy: true
@@ -25,7 +24,6 @@ services:
   - type: web
     name: chemical-equipment-frontend
     env: static
-    plan: free
     buildCommand: cd frontend-web && npm install && npm run build
     staticPublishPath: frontend-web/dist
     envVars:
