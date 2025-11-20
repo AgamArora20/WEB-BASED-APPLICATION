@@ -11,6 +11,16 @@ desktop/        # PyQt5 + Matplotlib desktop dashboard
 assets/         # Sample CSV for demos/tests
 ```
 
+## 🚀 Live Deployment
+
+- **Web Application:** [https://frontend-m1zq4qarg-agam-aroras-projects-98ceac60.vercel.app](https://frontend-m1zq4qarg-agam-aroras-projects-98ceac60.vercel.app)
+- **Backend API:** [https://web-production-68d9f.up.railway.app](https://web-production-68d9f.up.railway.app)
+- **Login Credentials:** 
+  - Username: `agamarora`
+  - Password: `12345678`
+
+```
+
 ## Key Features
 
 - CSV ingestion with pandas-based validation and analytics
