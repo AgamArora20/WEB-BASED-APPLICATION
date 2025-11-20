@@ -93,7 +93,7 @@ main {
 .error-text {
   color: #f87171;
   font-weight: 500;
-}
+  }
 
 .metrics-grid {
   display: grid;
@@ -134,7 +134,7 @@ table {
   width: 100%;
   border-collapse: collapse;
   font-size: 0.9rem;
-}
+  }
 
 th,
 td {

@@ -116,13 +116,13 @@ function App() {
   return (
     <div className="app-shell">
       <header>
-        <div>
+      <div>
           <h1>Chemical Equipment Parameter Visualizer</h1>
           <p>
             Upload CSV data, review automated analytics, and download PDF
             reports. Both web and desktop clients connect to the same API.
-          </p>
-        </div>
+        </p>
+      </div>
         <form className="auth-form">
           <label>
             Username
