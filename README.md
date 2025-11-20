@@ -125,20 +125,3 @@ Steps:
 5. Add the other env vars (`DJANGO_SECRET_KEY`, `DJANGO_ALLOWED_HOSTS`, `DJANGO_CSRF_TRUSTED_ORIGINS`, `CORS_ALLOWED_ORIGINS`, `DJANGO_DEBUG=False`).
 6. Visit the deployed URL, then run `railway run python backend/manage.py migrate` and `railway run python backend/manage.py createsuperuser`.
 7. Host the React frontend on Vercel/Netlify and set `VITE_API_BASE_URL` to the Railway backend URL.
-
-## Demo & Submission Notes
-
-1. Record a short (2–3 min) screen capture showing:
-   - CSV upload via the web UI
-   - Resulting charts and PDF download
-   - Desktop client fetching the shared history
-2. Push code + README to GitHub.
-3. Submit repository link, demo video, and optional deployment URL via the provided Google Form.
-
-## Future Enhancements
-
-- Deploy Django + React via containerized setup
-- Add JWT-based authentication + refresh tokens
-- Extend analytics (min/max, outliers, trends)
-- Persist more than five datasets with pagination + filtering
-- Bundle the desktop app with PyInstaller for one-click installs
