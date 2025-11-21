@@ -30,8 +30,10 @@ ENV/
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
-/media
-/staticfiles
+media/
+staticfiles/
+backend/media/
+backend/staticfiles/
 
 # Node
 node_modules/
@@ -51,13 +53,22 @@ build/
 *.swp
 *.swo
 *~
+
+# System Files
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
 
 # Environment
 .env
 .env.local
 .env.*.local
 .env.txt
+*.env.txt
 
 # Vercel
 .vercel
@@ -65,3 +76,10 @@ build/
 # Testing
 coverage/
 .nyc_output/
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+*~
